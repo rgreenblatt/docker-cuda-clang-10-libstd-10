@@ -1,6 +1,7 @@
 FROM nvidia/cuda:10.1-devel-ubuntu18.04
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu/ focal restricted main multiverse universe" >> /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ focal restricted main multiverse universe" \
+      >> /etc/apt/sources.list
 RUN apt-get update -y && apt-get install -y \
       libstdc++-10-dev \
       wget \
